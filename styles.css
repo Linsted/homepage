@@ -3,17 +3,22 @@
     padding: 0;
     box-sizing: border-box;
 }
+@font-face {
+    font-family: 'Star Jedi';
+    src: url('./fonts/Starjedi.ttf') format('truetype');
+}
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+font-family: 'Star Jedi', Arial, sans-serif;
     line-height: 1.5;
+    letter-spacing: 2px;
 
-    --primary-text-color: #181820;
-    --secondary-text-color: #5c5c62;
-    --durability-text-color: #6a737d9c;
-    --icon-color: #6a737d;
-    --border-color: #ff9a0045;
-    --text-decoration-color: #ff9a00;
+--primary-text-color: #ffd700;
+    --secondary-text-color: #a3a3a3;
+    --durability-text-color: #bcbcbc;
+    --icon-color: #bcbcbc;
+    --border-color: #ffd700;
+    --text-decoration-color: #ffd700;
 }
 
 .container {
@@ -41,12 +46,31 @@ body {
     padding: 30px 0;
     max-width: 900px;
 }
+.resume__link {
+    color: var(--primary-text-color);
+    text-decoration: none;
+    font-weight: bold;
+    
+}
 
+.resume_link:hover {
+    color: red;
+}
 .resume__block {
     border-bottom: 3px solid var(--border-color);
     padding-bottom: 30px;
     margin-bottom: 15px;
 }
+.resume__block--centered{
+    display: flex;
+        align-items: center;
+        flex-direction: column;
+}
+.experience__block {
+  display: flex;
+        justify-content: space-around;
+}
+
 
 @media screen and (max-width: 576px) {
 
@@ -214,9 +238,7 @@ body {
     padding-left: 20px;
 }
 
-.additional-info {
-    flex: 1 1 40%;
-}
+
 
 .additional-info__education {
     margin-bottom: 20px;
@@ -257,4 +279,14 @@ body {
 
 .additional-info__languages-item {
     color: var(--secondary-text-color);
+    font-size: 13px;
+}
+.container--centered{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.end__text{
+    margin-top: 20px;
+    font-size: 22px;
 }
